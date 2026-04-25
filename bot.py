@@ -797,5 +797,15 @@ async def top_voice(ctx, name: str):
     ))
 
 
+import asyncio
+
+async def main():
+    while True:
+        try:
+            await bot.start(TOKEN)
+        except Exception as e:
+            print("Crash détecté:", e)
+            await asyncio.sleep(5)
+
 if __name__ == "__main__":
-    bot.run(TOKEN)
+    asyncio.run(main())
