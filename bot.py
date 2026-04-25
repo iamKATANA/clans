@@ -25,7 +25,7 @@ logging.basicConfig(
     format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
     handlers=[
         logging.StreamHandler(),
-        logging.FileHandler("bot.log", encoding="utf-8"),
+        logging.FileHandler("bot.log", encoding="utf-8", mode="a"),
     ],
 )
 log = logging.getLogger("bot")
